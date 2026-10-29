@@ -6,6 +6,7 @@ import { mailRouter } from "./routes/mail.js";
 
 
 const app = express();
+app.use(express.json())
 
 
 app.use("/user/api/v1", userRouter)

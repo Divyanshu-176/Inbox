@@ -41,8 +41,8 @@ userRouter.post("/signup", async (req,res)=>{
 
 
 
-    }catch{
-        res.status(500).json({msg:"Server Error"})
+    }catch(error){
+        res.status(500).json({msg:"Server Error", error})
     }
 })
 
@@ -74,7 +74,7 @@ userRouter.post("/login", async (req,res)=>{
 
         
     }catch(error){
-        res.status(500).json({msg:"Server error"})
+        res.status(500).json({msg:"Server error", error})
     }
 })
 
